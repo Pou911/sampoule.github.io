@@ -15,70 +15,105 @@
       text-align: center;
     }
 
-    /* Top strokes: gradient stays 3vh, black band at 8vh */
-    .top-gradient { width: 100%; height: 3vh; background: linear-gradient(to right, #07265A, #0D4BB4); }
+    .top-gradient { width: 100%; height: 1.5vh; background: linear-gradient(to right, #07265A, #0D4BB4); }
     .top-black { width: 100%; height: 8vh; background: #000; display: flex; justify-content: center; align-items: center; }
-
-    /* logo sits centered inside the 8vh black band and is 4vh tall */
     .logo { height: 4vh; width: auto; max-height: 96px; min-height: 20px; display: block; }
 
-    /* Main area that fills VIEWPORT minus top strokes so footer stays below fold */
     .main {
-      height: calc(100vh - 11vh); /* remaining viewport (3vh + 8vh = 11vh total top) */
+      height: calc(100vh - 9.5vh);
       display: flex;
-      align-items: center;   /* vertical center */
-      justify-content: center; /* horizontal center */
+      align-items: center;
+      justify-content: center;
       width: 100%;
-      padding: 20px; /* keep some breathing room on very small screens */
+      padding: 20px;
     }
 
-    /* Card nearly full width & height but leaving space around it */
     .card {
-      background: #212121;
-      width: calc(100% - 80px); /* nearly full width with 40px side gaps */
-      height: calc(100% - 80px); /* nearly full height with 40px top/bottom gaps inside .main */
+      background: url('https://raw.githubusercontent.com/Pou911/sampoule.github.io/refs/heads/main/coming%20soon%20mountains%203.png') no-repeat center center;
+      background-size: cover;
+      width: calc(100% - 80px);
+      height: calc(100% - 80px);
       padding: 48px 64px;
-      border-radius: 36px; /* more rounded corners */
+      border-radius: 36px;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       margin: 0;
       box-sizing: border-box;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
     }
 
     .card h1 { font-size: 3.2rem; margin: 0; }
-    .card h2 { font-size: 2.6rem; margin: 12px 0 0 0; font-weight: 900; }
+    .card h2 { font-size: 2.6rem; margin: 12px 0 24px 0; font-weight: 900; }
+    .card button {
+      background: linear-gradient(to top, #07265A, #0D4BB4);
+      color: #fff;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 900;
+      font-size: 1rem;
+      padding: 16px 40px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
 
-    /* Footer (not sticky) - appears only after scrolling */
-    footer { background: #000; color: #bfbfbf; padding: 10px 20px 60px 20px; display: flex; flex-direction: column; align-items: center; }
+    /* FOOTER STYLING */
+    footer {
+      background: #000;
+      color: #bfbfbf;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px 20px 20px 20px;
+    }
 
-    .footer-links { list-style: disc; padding: 0; margin: 6px 0 40px 0; line-height: 1; }
-    .footer-links li { display: inline; margin: 0 15px; }
+    .footer-links {
+      list-style: disc;
+      padding: 0;
+      margin: 0 0 20px 0;
+      line-height: 1;
+    }
 
-    .footer-divider { height: 0.5px; width: 100%; background-color: #b1aba6; margin: 0; }
+    .footer-links li {
+      display: inline;
+      margin: 0 15px;
+    }
 
-    .footer-bottom { display: flex; align-items: center; width: 100%; max-width: 1200px; margin-top: 20px; padding: 12px 0; position: relative; }
-    .footer-bottom .mission { position: absolute; left: 25%; transform: translateX(-25%); white-space: nowrap; font-weight: 400; font-size: 0.8rem; color: inherit; }
-    .footer-bottom .copyright { margin-left: auto; font-weight: 400; font-size: 0.8rem; color: inherit; }
+    .footer-links li a {
+      color: #bfbfbf;
+      text-decoration: none;
+    }
 
-    /* Responsive tweaks */
-    @media (max-width: 900px) {
-      .card { width: calc(100% - 40px); height: calc(100% - 60px); padding: 32px; border-radius: 28px; }
-      .card h1 { font-size: 2.4rem; }
-      .card h2 { font-size: 1.8rem; }
+    .footer-links li a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-divider {
+      height: 1px;
+      width: 100vw;
+      background-color: #141414;
+      margin: 0 0 20px 0;
+    }
+
+    .footer-bottom {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .footer-bottom .mission, .footer-bottom .copyright {
+      font-weight: 400;
+      font-size: 0.8rem;
+      color: inherit;
+      text-align: center;
     }
 
     @media (max-width: 600px) {
-      .top-gradient { height: 2.5vh; }
-      .top-black { height: 6.5vh; }
-      .logo { height: 3.25vh; max-height: 64px; }
-      .card { width: calc(100% - 24px); height: calc(100% - 48px); padding: 20px; border-radius: 18px; }
-      .footer-bottom .mission { left: 12%; transform: translateX(-12%); font-size: 0.75rem; white-space: normal; }
       .footer-links li { margin: 0 10px; }
-      .main { height: calc(100vh - 9vh); }
     }
-
   </style>
 </head>
 <body>
@@ -91,16 +126,18 @@
     <div class="card">
       <h1>Coming soon.</h1>
       <h2>08/2027</h2>
+      <button onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSf09wwdTKtpeddnwke2bNGf30PlqmDkZjAJdSWzrtaj90OTkw/viewform?usp=header', '_blank')">SIGN UP FOR EARLY ACCESS</button>
     </div>
   </div>
 
+  <!-- FOOTER -->
   <footer>
     <ul class="footer-links">
-      <li>Instagram</li>
-      <li>Youtube</li>
-      <li>Twitter</li>
-      <li>Tiktok</li>
-      <li>Facebook</li>
+      <li><a href="https://www.instagram.com/sampoule_" target="_blank">Instagram</a></li>
+      <li><a href="https://www.youtube.com/@Sampoule" target="_blank">Youtube</a></li>
+      <li><a href="https://x.com/sampoule" target="_blank">X</a></li>
+      <li><a href="https://www.tiktok.com/@sampoule" target="_blank">Tiktok</a></li>
+      <li><a href="https://www.facebook.com/people/Sampoule-Shilajit/pfbid02rsXHykeSKbj1bWAQi9Tv9d82XhuX1TQRGkBHUHVsBWJAhoA2p8oLNMMtL7Ug4uZul/" target="_blank">Facebook</a></li>
     </ul>
     <div class="footer-divider"></div>
     <div class="footer-bottom">

@@ -5,30 +5,128 @@
   <title>Sampoule</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap" rel="stylesheet">
   <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      min-height: 100%;
+      font-family: 'Poppins', sans-serif;
+      background: #171717;
+      color: #ffffff;
+      text-align: center;
+    }
+
     body {
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-      background: #171717;
-      font-family: 'Poppins', sans-serif;
-      color: #ffffff;
     }
+
+    .top-border {
+      width: 100%;
+      height: 15px;
+      background: linear-gradient(to right, #07265A, #0D4BB4);
+    }
+
+    .logo {
+      width: 350px;
+      margin: 20px auto 30px auto;
+      display: block;
+    }
+
+    .card {
+      background: #212121;
+      padding: 40px 60px;
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 auto 40px auto;
+    }
+
     h1 {
       font-size: 3rem;
       margin: 0;
     }
+
     h2 {
-      font-size: 2.4rem; /* Slightly smaller than h1 */
+      font-size: 2.4rem;
       margin: 10px 0 0 0;
       font-weight: 900;
     }
+
+    footer {
+      background: #000;
+      padding: 10px 20px 60px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      color: #bfbfbf;
+    }
+
+    .footer-links {
+      list-style: disc;
+      padding: 0;
+      margin: 0 0 60px 0;
+    }
+
+    .footer-links li {
+      display: inline;
+      margin: 0 15px;
+    }
+
+    .footer-divider {
+      height: 1px;
+      width: 100%;
+      background-color: #141414;
+      margin: 0;
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      max-width: 1200px;
+      margin-top: 20px;
+    }
+
+    .footer-bottom .mission {
+      font-weight: 400;
+      font-size: 0.8rem;
+      text-align: left;
+      flex: 0 0 auto;
+    }
+
+    .footer-bottom .copyright {
+      text-align: right;
+      font-weight: 400;
+      font-size: 0.8rem;
+    }
+
   </style>
 </head>
 <body>
-  <h1>Coming soon.</h1>
-  <h2>08/2027</h2>
+  <div class="top-border"></div>
+  <img class="logo" src="https://raw.githubusercontent.com/Pou911/sampoule.github.io/main/sampoule%20shopify%20logo%20header%20(text%20%2B%20logo).png" alt="Sampoule Logo">
+
+  <div class="card">
+    <h1>Coming soon.</h1>
+    <h2>08/2027</h2>
+  </div>
+
+  <footer>
+    <ul class="footer-links">
+      <li>Instagram</li>
+      <li>Youtube</li>
+      <li>Twitter</li>
+      <li>Tiktok</li>
+      <li>Facebook</li>
+    </ul>
+    <div class="footer-divider"></div>
+    <div class="footer-bottom">
+      <div class="mission">Our mission is to deliver the highest quality natural supplements to help you perform at your best</div>
+      <div class="copyright">© Sampoule.</div>
+    </div>
+  </footer>
 </body>
 </html>
